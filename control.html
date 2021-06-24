@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    
+    <meta charset = "utf-8">
+<title>control</title>
+
+  <style type="text/CSS">
+
+input[type=text]{
+  border-style: groove;
+  border-width: 0px;
+  border-color:rgb(124, 129, 134); 
+}
+body {background-color: rgb(124, 129, 134);}
+center {background-color: rgb(255, 255, 255);}
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 25px;
+  background: #93a4b9;
+  outline: none;
+  opacity: 0.7; 
+}
+
+ 
+</style>
+</head>
+<body>
+
+    <center>
+        <br>
+        <form action="php.php" method ="POST" >
+        <div class="slidecontainer"> 
+            محرك1 <input type="range"  min="0" max="180" value="g" id="g" class="slider"  onchange="fetch()">
+        <input type="text" id="p" placeholder="0" </input> 
+        <br>
+        <div class="slidecontainer"> 
+2محرك<input type="range"  min="0" max="180" value="g1" id="g1" class="slider" onchange="fetch1()">
+        <input type="text" id="p1" placeholder="0"  </input> 
+         <br>
+         <div class="slidecontainer"> 
+            محرك3<input type="range"  min="0" max="180" value="g2" id="g2" class="slider" onchange="fetch2()">
+        <input type="text" id="p2" placeholder="0" </input> 
+         <br>
+         <div class="slidecontainer"> 
+            محرك4<input type="range"  min="0" max="180" value="g3" id="g3" class="slider" onchange="fetch3()">
+        <input type="text" id="p3" placeholder="0"  </input> 
+         <br>
+         <div class="slidecontainer"> 
+            محرك5<input type="range"  min="0" max="180" value="g4" id="g4"class="slider"  onchange="fetch4()">
+        <input type="text" id="p4" placeholder="0"  </input> 
+         <br>
+         <div class="slidecontainer"> 
+            محرك6<input type="range"  min="0" max="180" value="g5" id="g5" class="slider"  onchange="fetch5()">
+        <input type="text" id="p5" placeholder="0"  </input> 
+         <br>
+
+         <p> <label> 
+            <input  type="submit" value = "تشغيل" />
+        </label>
+        <label>
+            <input  type="submit" value = "حفظ" />
+             </label>
+        </p> 
+        
+
+        <script class="numbwers">
+            function fetch() {
+                let get = document.getElementById("g").value;
+                document.getElementById("p").value = get;
+            }
+        
+            function fetch1() {
+                let get = document.getElementById("g1").value;
+                document.getElementById("p1").value = get;
+            }
+            function fetch2() {
+                let get = document.getElementById("g2").value;
+                document.getElementById("p2").value = get;
+            }
+            function fetch3() {
+                let get = document.getElementById("g3").value;
+                document.getElementById("p3").value = get;
+            }
+            function fetch4() {
+                let get = document.getElementById("g4").value;
+                document.getElementById("p4").value = get;
+            }
+            function fetch5() {
+                let get = document.getElementById("g5").value;
+                document.getElementById("p5").value = get;
+            }
+        </script>
+</form>
+
+
+</center>          
+
+
+
+</body>
+</html>
